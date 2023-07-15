@@ -1,5 +1,5 @@
 {
-  "name": "strapi-v-4",
+  "name": "my-project",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -10,17 +10,19 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.11.3",
-    "@strapi/plugin-i18n": "4.11.3",
-    "@strapi/plugin-users-permissions": "4.11.3",
-    "@strapi/strapi": "4.11.3",
-    "better-sqlite3": "8.0.1"
+    "@strapi-community/dockerize": "^1.16.0",
+    "@strapi/plugin-i18n": "4.11.5",
+    "@strapi/plugin-users-permissions": "4.11.5",
+    "@strapi/strapi": "4.11.5",
+    "better-sqlite3": "8.0.1",
+    "pg": "^8.11.1",
+    "sharp": "^0.32.3"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "d35b52ed-8a39-4136-afd1-b5a734aa1b24"
+    "uuid": "7370a1d7-c03b-4557-a16b-ad7da3874f2b"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
