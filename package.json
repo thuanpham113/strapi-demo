@@ -5,7 +5,7 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "strapi start",
+    "start": "DATABASE_HOST=172.17.0.3 DATABASE_NAME=strapi strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
@@ -15,7 +15,7 @@
     "@strapi/plugin-users-permissions": "4.11.5",
     "@strapi/strapi": "4.11.5",
     "better-sqlite3": "8.0.1",
-    "pg": "^8.11.1",
+    "mysql": "^2.18.1",
     "sharp": "^0.32.3"
   },
   "author": {
