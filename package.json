@@ -5,12 +5,13 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "DATABASE_HOST=172.17.0.3 DATABASE_NAME=strapi strapi start",
+    "start": "DATABASE_HOST=172.17.0.4 DATABASE_NAME=strapi strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
     "@strapi-community/dockerize": "^1.16.0",
+    "@strapi/plugin-graphql": "^4.12.5",
     "@strapi/plugin-i18n": "4.11.5",
     "@strapi/plugin-users-permissions": "4.11.5",
     "@strapi/strapi": "4.11.5",
