@@ -2,7 +2,9 @@ version: '3'
 services:
   strapidemo:
     container_name: strapidemo
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
     image: strapidemo:latest
     restart: unless-stopped
     env_file: .env
@@ -30,10 +32,10 @@ services:
       - strapidemo
     depends_on:
       - strapidemoDB
-      
+
   strapidemoDB:
     container_name: strapidemoDB
-    platform: linux/amd64 #for platform error on Apple M1 chips
+    platform: linux/arm64/v8 #for platform error on Apple M1 chips
     restart: unless-stopped
     env_file: .env
     image: mysql:latest
@@ -51,19 +53,19 @@ services:
       - '3306:3306'
     networks:
       - strapidemo
-      
-  strapidemoAdminer:
-    container_name: strapidemoAdminer
-    image: adminer
-    restart: unless-stopped
-    ports:
-      - '9090:8080'
-    environment:
-      - ADMINER_DEFAULT_SERVER=strapidemoDB
-    networks:
-      - strapidemo
-    depends_on:
-      - strapidemoDB
+
+  # strapidemoAdminer:
+  #   container_name: strapidemoAdminer
+  #   image: adminer
+  #   restart: unless-stopped
+  #   ports:
+  #     - '9090:8080'
+  #   environment:
+  #     - ADMINER_DEFAULT_SERVER=strapidemoDB
+  #   networks:
+  #     - strapidemo
+  #   depends_on:
+  #     - strapidemoDB
 
 volumes:
   strapidemo-data:
