@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locates",
+  "info": {
+    "singularName": "locate",
+    "pluralName": "locates",
+    "displayName": "Locate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "altitude": {
+      "type": "float"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "accuracy": {
+      "type": "float"
+    },
+    "satsFixed": {
+      "type": "float"
+    },
+    "signalStrength": {
+      "type": "float"
+    },
+    "action": {
+      "type": "boolean"
+    },
+    "sms": {
+      "type": "richtext"
+    },
+    "idMachine": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
