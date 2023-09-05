@@ -4,15 +4,21 @@
   "info": {
     "singularName": "log",
     "pluralName": "logs",
-    "displayName": "Log"
+    "displayName": "Log",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "richtext"
+    "Phone": {
+      "type": "string",
+      "regex": "^(\\+84|0)\\d{9,10}$",
+      "required": true
+    },
+    "Text": {
+      "type": "text"
     }
   }
 }

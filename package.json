@@ -11,13 +11,14 @@
   },
   "dependencies": {
     "@strapi-community/dockerize": "^1.16.0",
-    "@strapi/plugin-graphql": "^4.12.5",
+    "@strapi/plugin-graphql": "^4.13.2",
     "@strapi/plugin-i18n": "4.11.5",
     "@strapi/plugin-users-permissions": "4.11.5",
     "@strapi/strapi": "4.11.5",
     "better-sqlite3": "8.0.1",
     "mysql": "^2.18.1",
-    "sharp": "^0.32.3"
+    "sharp": "^0.32.3",
+    "strapi-plugin-graphs-builder": "^1.0.0"
   },
   "author": {
     "name": "A Strapi developer"

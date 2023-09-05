@@ -17,6 +17,15 @@
     },
     "idMachine": {
       "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "TimeOut": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
     }
   }
 }

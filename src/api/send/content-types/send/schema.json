@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sends",
+  "info": {
+    "singularName": "send",
+    "pluralName": "sends",
+    "displayName": "Send",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Phone": {
+      "type": "string",
+      "regex": "^(\\+84|0)\\d{9,10}$",
+      "required": true,
+      "unique": false
+    },
+    "Text": {
+      "type": "text",
+      "required": true
+    },
+    "Status": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}
