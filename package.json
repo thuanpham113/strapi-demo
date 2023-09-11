@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@strapi-community/dockerize": "^1.16.0",
-    "@strapi/plugin-graphql": "^4.13.2",
+    "@strapi/plugin-graphql": "^4.13.4",
     "@strapi/plugin-i18n": "4.11.5",
     "@strapi/plugin-users-permissions": "4.11.5",
     "@strapi/strapi": "4.11.5",
