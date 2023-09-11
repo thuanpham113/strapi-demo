@@ -16,7 +16,9 @@
       "type": "string"
     },
     "idMachine": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "regex": "^(\\+84|0)\\d{9,10}$"
     },
     "Address": {
       "type": "text"
