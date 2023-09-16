@@ -29,6 +29,9 @@
     },
     "Status": {
       "type": "string"
+    },
+    "Notion": {
+      "type": "richtext"
     }
   }
 }
