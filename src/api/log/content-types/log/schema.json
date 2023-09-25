@@ -12,12 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Phone": {
+    "phone": {
       "type": "string",
       "regex": "^(\\+84|0|1)\\d{9,10}$",
       "required": true
     },
-    "Text": {
+    "text": {
       "type": "text"
     }
   }

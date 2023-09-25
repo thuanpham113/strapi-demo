@@ -12,17 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Phone": {
+    "tel": {
       "type": "string",
       "regex": "^(\\+84|0|1)\\d{9,10}$",
       "required": true,
       "unique": false
     },
-    "Text": {
+    "text": {
       "type": "text",
       "required": true
     },
-    "Status": {
+    "status": {
       "type": "boolean",
       "default": false,
       "required": false

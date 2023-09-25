@@ -12,33 +12,38 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "idMachine": {
+    "tel": {
       "type": "string",
       "unique": true,
       "regex": "^(\\+84|0|1)\\d{9,10}$",
       "required": true
     },
-    "Address": {
+    "address": {
       "type": "text"
     },
-    "TimeOut": {
+    "timeOut": {
       "type": "string"
     },
-    "Status": {
+    "status": {
       "type": "string"
     },
-    "Notion": {
+    "notion": {
       "type": "richtext"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "idMachine": {
+      "type": "string",
+      "required": true
     }
   }
 }
