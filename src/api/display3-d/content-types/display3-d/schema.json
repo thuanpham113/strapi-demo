@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "display3_ds",
+  "info": {
+    "singularName": "display3-d",
+    "pluralName": "display3-ds",
+    "displayName": "Display3D",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "env": {
+      "type": "json"
+    }
+  }
+}
