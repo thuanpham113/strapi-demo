@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_games",
+  "info": {
+    "singularName": "user-game",
+    "pluralName": "user-games",
+    "displayName": "UserGame"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Number": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

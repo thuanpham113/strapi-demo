@@ -879,6 +879,38 @@ export interface ApiSendSend extends Schema.CollectionType {
   };
 }
 
+export interface ApiUserGameUserGame extends Schema.CollectionType {
+  collectionName: 'user_games';
+  info: {
+    singularName: 'user-game';
+    pluralName: 'user-games';
+    displayName: 'UserGame';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Phone: Attribute.String;
+    Number: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::user-game.user-game',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::user-game.user-game',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -901,6 +933,7 @@ declare module '@strapi/types' {
       'api::log.log': ApiLogLog;
       'api::machine.machine': ApiMachineMachine;
       'api::send.send': ApiSendSend;
+      'api::user-game.user-game': ApiUserGameUserGame;
     }
   }
 }
