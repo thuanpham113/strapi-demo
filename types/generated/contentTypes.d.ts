@@ -721,6 +721,40 @@ export interface PluginGraphsBuilderGraph extends Schema.CollectionType {
   };
 }
 
+export interface ApiAwardAward extends Schema.CollectionType {
+  collectionName: 'awards';
+  info: {
+    singularName: 'award';
+    pluralName: 'awards';
+    displayName: 'Award';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Phone: Attribute.String;
+    Number: Attribute.String;
+    Rank: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::award.award',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::award.award',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDisplay3DDisplay3D extends Schema.CollectionType {
   collectionName: 'display3_ds';
   info: {
@@ -746,6 +780,74 @@ export interface ApiDisplay3DDisplay3D extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::display3-d.display3-d',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiErrorLoadErrorLoad extends Schema.CollectionType {
+  collectionName: 'error_loads';
+  info: {
+    singularName: 'error-load';
+    pluralName: 'error-loads';
+    displayName: 'ErrorLoad';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    status: Attribute.Integer;
+    message: Attribute.String;
+    details: Attribute.JSON;
+    data: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::error-load.error-load',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::error-load.error-load',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiListRankListRank extends Schema.CollectionType {
+  collectionName: 'list_ranks';
+  info: {
+    singularName: 'list-rank';
+    pluralName: 'list-ranks';
+    displayName: 'ListRank';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Rank: Attribute.String;
+    Name: Attribute.String;
+    Num: Attribute.Integer;
+    Option: Attribute.Integer & Attribute.DefaultTo<0>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::list-rank.list-rank',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::list-rank.list-rank',
       'oneToOne',
       'admin::user'
     > &
@@ -928,7 +1030,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::graphs-builder.graph': PluginGraphsBuilderGraph;
+      'api::award.award': ApiAwardAward;
       'api::display3-d.display3-d': ApiDisplay3DDisplay3D;
+      'api::error-load.error-load': ApiErrorLoadErrorLoad;
+      'api::list-rank.list-rank': ApiListRankListRank;
       'api::locate.locate': ApiLocateLocate;
       'api::log.log': ApiLogLog;
       'api::machine.machine': ApiMachineMachine;

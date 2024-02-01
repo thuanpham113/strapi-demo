@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "list_ranks",
+  "info": {
+    "singularName": "list-rank",
+    "pluralName": "list-ranks",
+    "displayName": "ListRank",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Rank": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Num": {
+      "type": "integer"
+    },
+    "Option": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
