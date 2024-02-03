@@ -830,7 +830,7 @@ export interface ApiListRankListRank extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Rank: Attribute.String;
@@ -839,7 +839,6 @@ export interface ApiListRankListRank extends Schema.CollectionType {
     Option: Attribute.Integer & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::list-rank.list-rank',
       'oneToOne',
